@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import requests
+import os
 
 client = discord.Client()
 
@@ -49,5 +50,5 @@ async def on_message(message):
             embed1 = discord.Embed(title= '', description=(f'**사유 : ** ``{reason}``'))
             embed1.set_author(name=f'{message.mentions[0].name} 님의 차단 로그 입니다.')
             await message.channel.send(embed=embed1)
-
-client.run('ODM5NzM1NDEwMTkyNDE2Nzc5.YJN-iw.49JotaJoIV0oiQMRRnV3IuhfPX0')
+access_token = os.environ["BOT_TOKEN"]
+client.run('sccess_token')
